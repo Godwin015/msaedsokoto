@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSAED - Sokoto</title>
+    <title>MSAED - Sokoto State</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Use Inter font */
@@ -67,7 +67,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <a href="#" class="flex-shrink-0 text-2xl font-extrabold text-white tracking-tight rounded-lg p-1">
-                    MSAED<span class="text-accent-teal"> Sokoto</span>
+                    MSAED<span class="text-accent-teal"> Sokoto State</span>
                 </a>
 
                 <nav class="hidden md:flex space-x-8">
@@ -143,6 +143,15 @@
                     <h3 class="text-2xl font-bold text-primary-blue text-center mb-10">Meet Our Pioneers</h3>
                     <div class="flex flex-col sm:flex-row justify-center space-y-10 sm:space-y-0 sm:space-x-12">
                         
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto hover:shadow-primary-blue/50 transition duration-500">
+                            <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
+                                src="gov.jpg" 
+                                alt="Image of Governor"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x450/102a43/f0f4f8?text=Commissioner'">
+                            <p class="text-xl font-bold text-primary-blue">His Excellency, Governor Ahmad Aliyu Sokoto</p>
+                            <p class="text-accent-teal font-medium">Executive Governor of Sokoto State</p>
+                        </div><p></p>
+
                         <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto hover:shadow-primary-blue/50 transition duration-500">
                             <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
                                 src="hon_comm.jpg" 
@@ -317,6 +326,34 @@
                             <h3 class="text-xl font-bold text-primary-blue mb-2">Designs</h3>
                         </div>
                     </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-teal/50 transition duration-300 transform hover:scale-[1.03] skill-card-animate">
+                        <img class="w-full h-60 object-cover" src="poultry.jpg" alt="Image of Poultry farming on a screen">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Poultry Farming</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-teal/50 transition duration-300 transform hover:scale-[1.03] skill-card-animate">
+                        <img class="w-full h-60 object-cover" src="fish.jpg" alt="Image of Fish Farming on a screen">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Fish Farming</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-teal/50 transition duration-300 transform hover:scale-[1.03] skill-card-animate">
+                        <img class="w-full h-60 object-cover" src="modern.jpg" alt="Image of Modern Agricultural technique on a screen">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Modern Agricultural Techniques</h3>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-teal/50 transition duration-300 transform hover:scale-[1.03] skill-card-animate">
+                        <img class="w-full h-60 object-cover" src="fertilizer.jpg" alt="Image of Fertilizer production on a screen">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Fertilizer Production</h3>
+                        </div>
+                    </div>
                     </div>
             </div>
         </section>
@@ -413,6 +450,10 @@
                                     <option value="Crafts">Crafts</option>
                                     <option value="Bead Making">Bead Making</option>
                                     <option value="Designs">Designs</option>
+                                    <option value="Poultry Farming">Poultry Farming</option>
+                                    <option value="Fish Farming">Fish Farming</option>
+                                    <option value="Modern Agricultural Techniques">Modern Agricultural Techniques</option>
+                                    <option value="Fertilizer Production">Fertilizer Production</option>
                                     <option value="general">General Inquiry</option>
                                 </select>
                             </div>
@@ -494,7 +535,7 @@
             const backgroundElement = document.getElementById('hero-background');
             
             // List of all 17 images from the Training section (16 is not enough)
-            // I've included all 17 skill images to ensure we have a good rotation of trades.
+            // I've included all 21 skill images to ensure we have a good rotation of trades.
             const images = [
                 "computer_tech.jpg",
                 "tailoring.jpg",
@@ -511,7 +552,11 @@
                 "pop.jpg",
                 "knitting.jpg",
                 "crafts.jpg",
-                "bead.jpg"
+                "bead.jpg",
+                "poultry.jpg",
+                "fish.jpg",
+                "modern.jpg",
+                "fertilizer.jpg"
             ];
             let currentImageIndex = 0;
             const rotationInterval = 4000; // 4000 milliseconds = 1 second
