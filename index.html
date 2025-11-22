@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillUp Academy - Empowering Future Leaders</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Use Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        /* Custom scroll-margin for smooth scrolling offset by fixed header */
+        .section-anchor {
+            scroll-margin-top: 7rem; /* Adjust this value based on header height */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e3a8a', /* Deep Blue */
+                        'accent-yellow': '#f59e0b', /* Bright Yellow */
+                        'bg-light': '#f9fafb',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-light text-gray-800">
+
+    <!-- Sticky Navigation Bar -->
+    <header class="sticky top-0 z-50 bg-primary-blue shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo/Brand -->
+                <a href="#" class="flex-shrink-0 text-2xl font-extrabold text-white tracking-tight rounded-lg p-1">
+                    MSAED<span class="text-accent-yellow"> Sokoto</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-white hover:text-accent-yellow transition duration-300 font-medium">Home</a>
+                    <a href="#about-us" class="text-white hover:text-accent-yellow transition duration-300 font-medium">About Us</a>
+                    <a href="#trainings" class="text-white hover:text-accent-yellow transition duration-300 font-medium">Training & Workshops</a>
+                    <a href="#contact-us" class="text-white hover:text-accent-yellow transition duration-300 font-medium">Contact Us</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-primary-blue/95">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-600">Home</a>
+                <a href="#about-us" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-600">About Us</a>
+                <a href="#trainings" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-600">Training & Workshops</a>
+                <a href="#contact-us" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-indigo-600">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative bg-primary-blue overflow-hidden py-24 sm:py-32">
+            <div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center" style="background-image: url('https://placehold.co/920x800/2a4b9a/ffffff?text=MSAED');"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="lg:w-3/4">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6 shadow-text-sm">
+                        Acquire the Skills. Accelerate Your Career.
+                    </h1>
+                    <p class="text-l text-indigo-100 mb-10 max-w-lg" style="text-align: justify;">
+                        The ministry of Skills Acquisition and Entrepreneurship Development is tasked with the crucial responsibility of designing, initiating, and implementing various skills acquisition programs aimed at creating employment opportunities and reducing poverty across the state. These programs are carefully structured to equip individuals with practical knowledge and technical expertise in diverse fields, enabling them to become self-reliant and contribute effectively to the economy. Beyond providing vocational training, the ministry also focuses on fostering entrepreneurship, encouraging residents to start their own businesses and engage in productive ventures that generate income and promote economic growth. By promoting innovation and enterprise development, the ministry seeks to nurture a culture of creativity and resilience among citizens. The overarching goal is not only to address immediate unemployment challenges but also to empower individuals with sustainable skills that enhance their long-term employability. Through these initiatives, the ministry plays a pivotal role in the social and economic transformation of the state.
+                    </p>
+                    <a href="#trainings" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-2xl text-primary-blue bg-accent-yellow hover:bg-yellow-300 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                        Explore Our Programs &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="section-anchor py-20 sm:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center">
+                    <h2 class="text-base text-accent-yellow font-semibold tracking-wide uppercase">Our Mission</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary-blue sm:text-4xl">
+                        Empowering Growth Through Education
+                    </p>
+                </div>
+
+                <div class="mt-16 space-y-16 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+                    <!-- Feature 1: Vision -->
+                    <div class="p-6 bg-bg-light rounded-xl shadow-2xl hover:shadow-primary-blue/30 transition duration-500">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-yellow text-primary-blue mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13.75M9 19H4.75a2.25 2.25 0 01-2.25-2.25V4.75a2.25 2.25 0 012.25-2.25h14.5a2.25 2.25 0 012.25 2.25v8.5a2.25 2.25 0 01-2.25 2.25H16.75"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-blue mb-2">Our Vision</h3>
+                        <p class="text-gray-600">To be the leading global provider of skills acquisition programs, fostering a community of highly competent and innovative professionals.</p>
+                    </div>
+
+                    <!-- Feature 2: Values -->
+                    <div class="p-6 bg-bg-light rounded-xl shadow-2xl hover:shadow-primary-blue/30 transition duration-500">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-yellow text-primary-blue mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.05-2.05m-2.05 2.05L15 6m2.95 5.05L19 13m-2.05-2.05L15 13m-7.05-7.05L10 8m2.05-2.05L10 8"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-blue mb-2">Core Values</h3>
+                        <p class="text-gray-600">Integrity, Innovation, Excellence, and Inclusivity form the foundation of our training methodology and organizational culture.</p>
+                    </div>
+
+                    <!-- Feature 3: Community Impact (Updated content to make space for Founders below) -->
+                    <div class="p-6 bg-bg-light rounded-xl shadow-2xl hover:shadow-primary-blue/30 transition duration-500">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-accent-yellow text-primary-blue mb-4">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-primary-blue mb-2">Community Impact</h3>
+                        <p class="text-gray-600">Founded in 2015, we have successfully trained over 10,000 individuals across various industries, maintaining a 95% placement rate.</p>
+                    </div>
+                </div>
+
+                <!-- Founders Sub-Section: Dedicated Area for Images and Bios -->
+                <div class="mt-20 border-t border-gray-200 pt-16">
+                    <h3 class="text-2xl font-bold text-primary-blue text-center mb-10">Meet Our Visionary Founders</h3>
+                    <div class="flex flex-col sm:flex-row justify-center space-y-10 sm:space-y-0 sm:space-x-12">
+                        
+                        <!-- Founder 1 
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto">
+                            <img class="w-32 h-32 rounded-full mx-auto object-cover mb-4 ring-4 ring-accent-yellow" 
+                                 src="https://placehold.co/300x300/1e3a8a/ffffff?text=Founder+A" 
+                                 alt="Image of Founder A, Dr. Aliyah Khan"
+                                 onerror="this.onerror=null;this.src='https://placehold.co/300x300/1e3a8a/ffffff?text=Founder+A'">
+                            <p class="text-xl font-bold text-primary-blue">Dr. Aliyah Khan</p>
+                            <p class="text-accent-yellow font-medium">Chief Executive Officer (CEO)</p>
+                            <p class="mt-3 text-sm text-gray-600">A seasoned entrepreneur and educator with 20+ years of experience in career development and skills training.</p>
+                        </div>-->
+
+                        <!-- Founder 2 -->
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto">
+                            <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
+                                src="S.A_skills.jpg" 
+                                alt="Image of Founder B, Eng. David Chen"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x450/1e3a8a/ffffff?text=Founder+B'">
+                            <p class="text-xl font-bold text-primary-blue">Eng. David Chen</p>
+                            <p class="text-accent-yellow font-medium">Chief Operating Officer (COO)</p>
+                            <p class="mt-3 text-sm text-gray-600">A technical visionary specializing in scalable training platforms and building critical industry partnerships.</p>
+                        </div>
+
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto">
+                            <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
+                                src="hon_comm.jpg" 
+                                alt="Image of Founder B, Eng. David Chen"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x450/1e3a8a/ffffff?text=Founder+B'">
+                            <p class="text-xl font-bold text-primary-blue">Eng. David Chen</p>
+                            <p class="text-accent-yellow font-medium">Chief Operating Officer (COO)</p>
+                            <p class="mt-3 text-sm text-gray-600">A technical visionary specializing in scalable training platforms and building critical industry partnerships.</p>
+                        </div>
+
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto">
+                            <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
+                                src="perm_sec.jpg" 
+                                alt="Image of Founder B, Eng. David Chen"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x450/1e3a8a/ffffff?text=Founder+B'">
+                            <p class="text-xl font-bold text-primary-blue">Eng. David Chen</p>
+                            <p class="text-accent-yellow font-medium">Chief Operating Officer (COO)</p>
+                            <p class="mt-3 text-sm text-gray-600">A technical visionary specializing in scalable training platforms and building critical industry partnerships.</p>
+                        </div>
+
+                        <div class="text-center p-6 bg-bg-light rounded-2xl shadow-xl max-w-sm mx-auto">
+                            <img class="w-35 h-48 mx-auto object-cover mb-4 ring-0 rounded-lg" 
+                                src="Dir.jpg" 
+                                alt="Image of Founder B, Eng. David Chen"
+                                onerror="this.onerror=null;this.src='https://placehold.co/300x450/1e3a8a/ffffff?text=Founder+B'">
+                            <p class="text-xl font-bold text-primary-blue">Eng. David Chen</p>
+                            <p class="text-accent-yellow font-medium">Chief Operating Officer (COO)</p>
+                            <p class="mt-3 text-sm text-gray-600">A technical visionary specializing in scalable training platforms and building critical industry partnerships.</p>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trainings/Seminars/Workshop Section -->
+        <section id="trainings" class="section-anchor py-20 sm:py-32 bg-primary-blue/95">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:text-center mb-12">
+                    <h2 class="text-base text-accent-yellow font-semibold tracking-wide uppercase">Skill Acquisition Trainings</h2>
+                    <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+                        Explore All Vocational Training Programs
+                    </p>
+                    <p class="mt-4 max-w-2xl text-xl text-indigo-200 lg:mx-auto">
+                        High-demand trade skills, each designed to give you hands-on experience and a direct path to employment.
+                    </p>
+                </div>
+
+                <!-- Individual Skill Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+
+                    <!-- Start of Skill Cards -->
+                    <!-- Card Template: Image (300x150) / Title / Short Description / Link -->
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src= "computer_tech.jpg" alt="Image of Computer Technicians at work">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Computer Technicians</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="tailoring.jpg" alt="Image of tailoring and fashion design">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Tailoring</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="modern_carpenter.jpg" alt="Image of modern carpentry workshop">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Modern Carpentry</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="waste.jpg" alt="Image showing recycling and creative reuse">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Waste to Wealth Conversion</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="electrical.jpg" alt="Image of electrical wiring installation">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Electrical Installation</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="solar.jpg" alt="Image of solar panel installation and repair">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Solar Installation and Repair</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="phone.jpg" alt="Image of smartphone repair technician">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Phone Repair</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="barbing.jpg" alt="Image of a person getting a haircut (barbing)">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Barbing</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="building.jpg" alt="Image of construction site and building work">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Building</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="plumbing.jpg" alt="Image of plumbing installation">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Plumbing</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="tiling.jpg" alt="Image of floor tiling work">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Tiling</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="interior.jpg" alt="Image of interior decoration concepts">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Interior Decoration</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="pop.jpg" alt="Image of Plaster of Paris (P.O.P) ceiling work">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">P.O.P (Plaster of Paris)</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="knitting.jpg" alt="Image of knitting yarn and needles">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Knitting</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="crafts.jpg" alt="Image of various crafts being made">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Crafts</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="bead.jpg" alt="Image of bead making and jewelry work">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Bead Making</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-accent-yellow/50 transition duration-300 transform hover:scale-[1.03]">
+                        <img class="w-full h-60 object-cover" src="designs.jpg" alt="Image of graphic design work on a screen">
+                        <div class="p-5">
+                            <h3 class="text-xl font-bold text-primary-blue mb-2">Designs</h3>
+                            <!-- <p class="text-gray-600 text-sm">Hardware repair, software diagnostics, and network troubleshooting expertise.</p> -->
+                        </div>
+                    </div>
+                    <!-- End of Skill Cards -->
+
+                </div>
+                
+                <div class="text-center mt-16">
+                    <a href="#contact-us" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-xl shadow-2xl text-primary-blue bg-accent-yellow hover:bg-yellow-300 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-yellow-500 focus:ring-opacity-50">
+                        Inquire About Any Program &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section id="contact-us" class="section-anchor py-20 sm:py-32 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-12">
+                    <!-- Contact Information -->
+                    <div class="mb-10 lg:mb-0">
+                        <h2 class="text-base text-accent-yellow font-semibold tracking-wide uppercase">Get In Touch</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary-blue sm:text-4xl mb-8">
+                            Start Your Journey Today
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <span class="flex-shrink-0 text-primary-blue pt-1">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                                </span>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-gray-700">Email Address</h3>
+                                    <p class="text-primary-blue font-medium"><a href="mailto:msaedsokoto@yahoo.com">msaedsokoto@yahoo.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="flex-shrink-0 text-primary-blue pt-1">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
+                                </span>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-gray-700">Phone Number</h3>
+                                    <p class="text-primary-blue font-medium">+2348037335814, 07069460970, 08035074248, 07038883588</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="flex-shrink-0 text-primary-blue pt-1">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                                </span>
+                                <div class="ml-4">
+                                    <h3 class="text-lg font-semibold text-gray-700">Office Location</h3>
+                                    <p class="text-primary-blue font-medium">Ministry of Skills Acquisition and Entrepreneur Development Sokoto. Block 12, Second floor Shehu Kangiwa Secretariat, Sokoto State.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="bg-bg-light p-8 rounded-2xl shadow-2xl border border-gray-100">
+                        <form id="contact-form" 
+                            action="https://formsubmit.co/msaedsokoto@gmail.com" 
+                            method="POST"
+                            class="space-y-6">
+
+                            <!-- FormSubmit settings -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="box">
+                            <input type="hidden" name="_subject" value="New Inquiry From Your Website">
+
+                            <!-- Redirect to success.html after submission -->
+                            <input type="hidden" name="_next" value="https://msaedsokoto.org/success.html">
+
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                                <input type="text" id="name" name="name" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-primary-blue focus:ring-primary-blue transition duration-150">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                                <input type="email" id="email" name="email" required
+                                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-primary-blue focus:ring-primary-blue transition duration-150">
+                            </div>
+
+                            <div>
+                                <label for="interest" class="block text-sm font-medium text-gray-700">Area of Interest</label>
+                                <select id="interest" name="interest" required
+                                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-primary-blue focus:ring-primary-blue transition duration-150 bg-white">
+                                    <option value="">-- Select a Specific Program --</option>
+                                    <option value="Computer Technicians">Computer Technicians</option>
+                                    <option value="Tailoring">Tailoring</option>
+                                    <option value="Modern Carpentry">Modern Carpentry</option>
+                                    <option value="Waste to Wealth Conversion">Waste to Wealth Conversion</option>
+                                    <option value="Electrical Installation">Electrical Installation</option>
+                                    <option value="Solar Installation and Repair">Solar Installation and Repair</option>
+                                    <option value="Phone Repair">Phone Repair</option>
+                                    <option value="Barbing">Barbing</option>
+                                    <option value="Building">Building</option>
+                                    <option value="Plumbing">Plumbing</option>
+                                    <option value="Tiling">Tiling</option>
+                                    <option value="Interior Decoration">Interior Decoration</option>
+                                    <option value="P.O.P">P.O.P (Plaster of Paris)</option>
+                                    <option value="Knitting">Knitting</option>
+                                    <option value="Crafts">Crafts</option>
+                                    <option value="Bead Making">Bead Making</option>
+                                    <option value="Designs">Designs</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                                <textarea id="message" name="message" rows="4" required
+                                        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:border-primary-blue focus:ring-primary-blue transition duration-150"></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-md text-sm font-medium text-white bg-primary-blue hover:bg-indigo-700 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-blue focus:ring-opacity-50">
+                                Send Inquiry
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; <span id="current-year"></span> Ministry of Skills Acquisition and Entrepreneur Development (MSAED), Sokoto State. All rights reserved.</p>
+            <div class="mt-4 text-sm text-gray-400 space-x-4">
+                <a href="#about-us" class="hover:text-accent-yellow">Privacy Policy</a>
+                <span class="text-gray-600">|</span>
+                <a href="#trainings" class="hover:text-accent-yellow">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in footer
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Mobile Menu Toggle Logic
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelectorAll('#mobile-menu a, nav a');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu and smooth scroll on link click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (mobileMenu.classList.contains('block')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    // Handle smooth scrolling for all internal links
+                    if (this.hash !== "") {
+                        e.preventDefault();
+                        const hash = this.hash;
+                        const targetElement = document.querySelector(hash);
+                        if (targetElement) {
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // Optional: Form message feedback (but allow actual submission)
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', function() {
+                // Removed e.preventDefault() so form submits normally
+
+                // Optional: display a quick feedback before redirect
+                const interest = document.getElementById('interest').value;
+                const name = document.getElementById('name').value;
+
+                if (formMessage) {
+                    formMessage.textContent = `Thank you, ${name}! Your inquiry for the ${interest} program is being sent...`;
+                    formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-800');
+                    formMessage.classList.add('bg-green-100', 'text-green-800', 'block');
+                }
+
+                // Form will submit and redirect to _next automatically
+            });
+        });
+        </script>
+
+
+</body>
+</html>
